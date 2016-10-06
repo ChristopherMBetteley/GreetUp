@@ -6,7 +6,7 @@
 
 <h2>Events</h2>
 
-<p>
+<p id="CreateLink">
     @Html.ActionLink("Create New", "Create")
 </p>
 
@@ -15,20 +15,15 @@
     @foreach (var item in Model)
     {
         <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <div class="caption">
+            <div class="thumbnail" id="thumbnail">
+                <div class="caption" >
 
                     <h3> @Html.DisplayFor(modelItem => item.EventName)</h3>
-                    @*@Html.DisplayFor(modelItem => item.EventDate)
-                    @Html.DisplayFor(modelItem => item.EventLocation)*@
+
                     <p>@Html.DisplayFor(modelItem => item.EventDescription)</p>
-@*                    @Html.DisplayFor(modelItem => item.EventAttendee)*@
 
+                    <p id="detailsBtn">@Html.ActionLink("Event Details", "Details", new { id = item.EventID }, new { @class = "btn btn-primary" })</p>
 
- @*                   @Html.ActionLink("Edit", "Edit", new { id = item.EventID }) |*@
-                    <p>@Html.ActionLink("Details", "Details", new { id = item.EventID }, new { @class = "btn btn-primary" })</p>
-@*                    @Html.ActionLink("Details", "Details", new { id = item.EventID }) |*@
-  @*                 @Html.ActionLink("Delete", "Delete", new { id = item.EventID })*@
                 </div>
             </div>
         </div>
@@ -37,6 +32,5 @@
 
 
 
-                     @*<p>@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-primary" })</p>*@
-                
+
 

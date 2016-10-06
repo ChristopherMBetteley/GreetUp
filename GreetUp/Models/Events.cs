@@ -11,10 +11,15 @@ namespace greet_up.Models
     {
         [Key]
         public int EventID { get; set; }
+        [Display(Name = "Event Name")]
         public string EventName { get; set; }
+        [Display(Name = "Date")]
         public DateTime EventDate { get; set; }
+        [Display(Name = "Location")]
         public string EventLocation { get; set; }
+        [Display(Name = "Description")]
         public string EventDescription { get; set; }
+        [Display(Name = "Number Attending")]
         public int EventAttendee { get; set; }
     }
 }
